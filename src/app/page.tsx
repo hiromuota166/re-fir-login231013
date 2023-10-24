@@ -1,18 +1,17 @@
-"use client";
+'use client';
 import { useEffect, useState } from "react";
-import { useAuth } from "./_lib/contents/auth"
-import { login, logout } from "./_lib/auth";
-import { Avatar, Button } from "@chakra-ui/react";
+import { useAuth } from "./_lib/contents/auth";
+import { login } from "./_lib/auth";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function LoginPage() {
   const user = useAuth();
+  const router = useRouter();
   const [waiting, setWaiting] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(user);
-    if (user != undefined && user != null) {
-      console.log("ログイン成功！");
+    if (user) {
+      router.push("/home"); // ログインしたらホームページにリダイレクト
     }
   }, [user]);
 
@@ -27,10 +26,10 @@ export default function Home() {
         setWaiting(false);
       });
   };
+
   return (
     <div>
-      {user === null && !waiting && <button onClick={signIn}>ログイン</button>}
-      {user && <button onClick={logout}>ログアウト</button>}
+      {!waiting && <button onClick={signIn}>ログイン</button>}
     </div>
   );
 }
