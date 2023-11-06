@@ -1,4 +1,4 @@
-import { auth } from '@/app/_lib/firebase';
+import { auth } from "@/app/(portal)/_lib/firebase";
 import {
   //google認証を使うための関数
   GoogleAuthProvider,
@@ -8,13 +8,13 @@ import {
   UserCredential,
   //ログアウトするための関数
   signOut,
-} from 'firebase/auth';
+} from "firebase/auth";
 
 export const login = (): Promise<UserCredential> => {
   const provider = new GoogleAuthProvider();
   //ユーザにアカウント選択画面を表示させる
-  provider.setCustomParameters({ 
-    prompt: 'select_account' 
+  provider.setCustomParameters({
+    prompt: "select_account",
   });
   return signInWithPopup(auth, provider);
 };

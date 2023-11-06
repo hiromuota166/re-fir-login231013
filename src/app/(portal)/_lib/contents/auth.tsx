@@ -1,5 +1,5 @@
-'use client';
-import { auth, db } from "../firebase"
+"use client";
+import { auth, db } from "../firebase";
 import { User } from "../../types/user";
 import { doc, getDoc, setDoc } from "@firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
@@ -14,7 +14,6 @@ import {
 type UserContextType = User | null | undefined;
 
 const AuthContext = createContext<UserContextType>(undefined);
-
 
 // 以下を追加
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
