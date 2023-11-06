@@ -1,5 +1,5 @@
 "use client";
-import Logout from "@/app/(portal)/_components/Logout";
+import Logout from "@/app/(auth)/_components/Logout";
 export default function Home() {
   return (
     <div>

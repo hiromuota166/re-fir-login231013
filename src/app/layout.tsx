@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AuthProvider } from "./(portal)/_lib/contents/auth";
 import { ChakraProvider } from "@chakra-ui/react";
-import Hooter from "./(portal)/_components/footer";
+import Hooter from "./(auth)/_components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

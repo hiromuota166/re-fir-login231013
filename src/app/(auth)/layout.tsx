@@ -1,7 +1,7 @@
 import "../../app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Hooter from "../(portal)/_components/footer";
+import Hooter from "./_components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Hooter/>
+      <Hooter />
       {children}
     </>
   );
