@@ -1,9 +1,10 @@
 "use client";
 import Logout from "@/app/(auth)/_components/Logout";
+import Header from "../../_components/header";
 export default function Home() {
   return (
     <div>
-      <h1>ホームページ</h1>
+      <Header name="ホーム"/>
       <Logout />
     </div>
   );
