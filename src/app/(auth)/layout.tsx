@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <html className="bg-white">
       <Hooter />
       {children}
-    </>
+    </html>
   );
 }
