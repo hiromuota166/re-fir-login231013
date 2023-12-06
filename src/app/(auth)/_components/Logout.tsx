@@ -1,6 +1,6 @@
-'use client';
-import { logout } from "@/app/_lib/auth";
-import { useAuth } from "@/app/_lib/contents/auth";
+"use client";
+import { logout } from "@/app/(portal)/_lib/auth";
+import { useAuth } from "@/app/(portal)/_lib/contents/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -18,9 +18,5 @@ export default function Logout() {
     logout();
   };
 
-  return (
-    <div>
-      {user && <button onClick={signOut}>ログアウト</button>}
-    </div>
-  );
+  return <div>{user && <button onClick={signOut}>ログアウト</button>}</div>;
 }

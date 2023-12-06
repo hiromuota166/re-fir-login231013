@@ -1,9 +1,7 @@
-import "./globals.css";
+import "../../app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { AuthProvider } from "./(portal)/_lib/contents/auth";
-import { ChakraProvider } from "@chakra-ui/react";
-import Hooter from "./(auth)/_components/footer";
+import Hooter from "./_components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <AuthProvider>
-          <ChakraProvider>{children}</ChakraProvider>
-        </AuthProvider>
-      </body>
+    <html className="bg-white">
+      <Hooter />
+      {children}
     </html>
   );
 }
